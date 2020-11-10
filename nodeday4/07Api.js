@@ -8,4 +8,13 @@ router.get('/get', (req, res) => {
         data: query
     })
 })
+//post请求
+router.post('/post', (req, res) => {
+    const body = req.body
+    res.send({
+        status: 0,
+        msg: 'post请求成功',
+        data: body
+    })
+})
 module.exports = router

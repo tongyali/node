@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+    <button id="get">get请求</button>
+    <button id="post">post请求</button>
+    <script>
+        $(function () {
+            $("#get").click(function () {
+                $.ajax({
+                    method: 'GET',
+                    url: 'http://127.0.0.1/api/get',
+                    data: {
+                        username: 'zs',
+                        age: '18',
+                        gender: '男'
+                    },
+                    success: function (res) {
+                        console.log(res);
+                    }
+                })
+            })
+            $("#post").click(function () {
+                $.ajax({
+                    method: 'POST',
+                    url: 'http://127.0.0.1/api/post',
+                    data: {
+                        username: 'ls',
+                        age: '80',
+                        gender: '女'
+                    },
+                    success: function (res) {
+                        console.log(res);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
